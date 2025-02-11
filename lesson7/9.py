@@ -35,9 +35,20 @@ employees = {
     }
 }
 
-masterstvo_list = []
+masterstvo = {}
 
-for employee in employees.values():
+for emloyee, params in employees.items():
 
-    for parametr in employee.values():
+    for skill, level in params['Навыки'].items():
+
+        if skill not in masterstvo or masterstvo[skill] < level :
+
+            masterstvo[skill] = (emloyee, level)
+
+
+for skill, tup in masterstvo.items():
+
+    print(f'{skill} - {tup[0]} - уровень {tup[1]}%')
+
+#print(masterstvo)
 
