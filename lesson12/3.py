@@ -1,9 +1,11 @@
 
 class Counter:
 
-    def __init__(self, value=0):
+    def __init__(self, start_value=0):
 
-        self.value = value
+        self.value = start_value
+        self.start_value = start_value
+
 
     def increase(self, num=1):
 
@@ -15,6 +17,6 @@ class Counter:
 
     def reset(self):
 
-        return self.value
+        return self.start_value
 
     
